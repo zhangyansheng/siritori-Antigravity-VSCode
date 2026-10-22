@@ -1,0 +1,862 @@
+{
+  "schema_version": "6.1",
+  "game_id": "g-20261022-082720",
+  "state_version": 488,
+  "status": "ended",
+  "end_reason": "INVALID_ANSWER",
+  "stop_requested": false,
+  "current_player": "PlayerB",
+  "player_turn_order": [
+    "PlayerA",
+    "PlayerC",
+    "PlayerB"
+  ],
+  "start_char": "ぬ",
+  "char_change_count": 0,
+  "required_prefix": "し",
+  "prefix_reason": null,
+  "last_identifier_reading": "しょうとくたいし",
+  "total_turns": 9,
+  "dispatch_count": 9,
+  "scores": {
+    "PlayerA": 31,
+    "PlayerB": 29,
+    "PlayerC": 18
+  },
+  "disqualified": "PlayerB",
+  "winners": [
+    "PlayerA"
+  ],
+  "pending_instruction": {
+    "protocol_version": "1.0",
+    "type": "TURN_INSTRUCTION",
+    "message_id": "e315c568-2bfb-4fd7-be86-1ac7868bed4b",
+    "game_id": "g-20261022-082720",
+    "turn": 9,
+    "to": "PlayerB",
+    "sent_at": "2026-10-22T08:27:58.669465+09:00",
+    "required_prefix": "し",
+    "prefix_reason": null,
+    "time_limit_sec": 60,
+    "scores": {
+      "PlayerA": 31,
+      "PlayerB": 29,
+      "PlayerC": 18
+    },
+    "history": [
+      {
+        "turn": 1,
+        "player": "PlayerA",
+        "full_name": "沼津藩合戦",
+        "identifier_reading": "ぬまづはん"
+      },
+      {
+        "turn": 2,
+        "player": "PlayerC",
+        "full_name": "廃藩置県",
+        "identifier_reading": "はいはんちけん"
+      },
+      {
+        "turn": 3,
+        "player": "PlayerB",
+        "full_name": "加ト・けん・たけしの世紀末スペシャル!!",
+        "identifier_reading": "けん"
+      },
+      {
+        "turn": 4,
+        "player": "PlayerA",
+        "full_name": "けんちゃんのオーマイゴッド",
+        "identifier_reading": "けんちゃんのおーまいごっど"
+      },
+      {
+        "turn": 5,
+        "player": "PlayerC",
+        "full_name": "徳川家康",
+        "identifier_reading": "とくがわ"
+      },
+      {
+        "turn": 6,
+        "player": "PlayerB",
+        "full_name": "和田合戦",
+        "identifier_reading": "わだ"
+      },
+      {
+        "turn": 7,
+        "player": "PlayerA",
+        "full_name": "大化の改新",
+        "identifier_reading": "たいかのかいしん"
+      },
+      {
+        "turn": 8,
+        "player": "PlayerC",
+        "full_name": "聖徳太子",
+        "identifier_reading": "しょうとくたいし"
+      }
+    ],
+    "from": "Judge"
+  },
+  "last_reply": {
+    "protocol_version": "1.0",
+    "type": "TURN_REPLY",
+    "message_id": "75c055fb-762e-4a1f-a654-43bf08cc21b5",
+    "in_reply_to": "e315c568-2bfb-4fd7-be86-1ac7868bed4b",
+    "game_id": "g-20261022-082720",
+    "turn": 9,
+    "to": "Judge",
+    "sent_at": "2026-10-22T08:28:01.386284+09:00",
+    "status": "answered",
+    "answer": {
+      "full_name": "治承・寿永の乱",
+      "identifier": "治承・寿永",
+      "identifier_reading": "じしょう・じゅえい",
+      "suffix": "乱",
+      "category": "乱",
+      "source_id": "wikipedia_ja",
+      "source_title": "治承・寿永の乱"
+    },
+    "event_info": {
+      "summary": "治承・寿永の乱（じしょう・じゅえいのらん）は、平安時代末期の治承4年（1180年）から元暦2年（1185年）にかけての6年間にわたる国内各地の内乱であり、平清盛を中心とする伊勢平氏正盛流に対する反乱である。日宋貿易などで得られた富を中央政府側で独占し、その財と権力で栄華を極め、傍若無人に振る舞った平…",
+      "era": "治承4年",
+      "key_persons": [],
+      "significance": "治承・寿永の乱は日本の歴史上重要な意義を持ちます。",
+      "trivia": "治承・寿永の乱に関する興味深い出来事です。",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/治承・寿永の乱"
+      ]
+    },
+    "comment": "日本史の転換点として極めて教育的意義の高い『治承・寿永の乱』を挙げます。",
+    "from": "PlayerB"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "player": "PlayerA",
+      "message_id": "a8e7b406-f81d-419f-9e24-59bc6f78089f",
+      "required_prefix": "ぬ",
+      "answer": {
+        "full_name": "沼津藩合戦",
+        "identifier": "沼津藩",
+        "identifier_reading": "ぬまづはん",
+        "suffix": "合戦",
+        "category": "合戦名",
+        "source_id": "wikipedia_ja",
+        "source_title": "沼津藩合戦"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 5,
+        "bonus": {
+          "strategy": {
+            "score": 2,
+            "reason": "語尾が『は』となり相手の選択肢を大きく狭める強力な布石です。"
+          },
+          "education": {
+            "score": 1,
+            "reason": "歴史の転換点を象徴する重要な出来事です。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 8
+      },
+      "elapsed_ms": 3207,
+      "commentary": "第1ターン、PlayerA の繰り出した『沼津藩合戦』が炸裂！会場からどよめきが起こります！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 沼津藩合戦 ／ 識別子: 沼津藩（読み: ぬまづはん） ／ 後半呼称: 合戦",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "合戦名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "駿河の合戦。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『沼津藩合戦』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『沼津藩』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "は"
+    },
+    {
+      "turn": 2,
+      "player": "PlayerC",
+      "message_id": "356148af-cef0-4190-a4ec-96c9ce93e932",
+      "required_prefix": "は",
+      "answer": {
+        "full_name": "廃藩置県",
+        "identifier": "廃藩置県",
+        "identifier_reading": "はいはんちけん",
+        "suffix": "",
+        "category": "事件名",
+        "source_id": "wikipedia_ja",
+        "source_title": "廃藩置県"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 4,
+        "bonus": {
+          "strategy": {
+            "score": 2,
+            "reason": "語尾が『けん』となり相手の選択肢を大きく狭める強力な布石です。"
+          },
+          "education": {
+            "score": 2,
+            "reason": "日本史の教科書的にも極めて重要であり、歴史的意義の記述が充実しています。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 8
+      },
+      "elapsed_ms": 3405,
+      "commentary": "第2ターン、PlayerC による『廃藩置県』！歴史の重みを感じさせる素晴らしい一手です！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 廃藩置県 ／ 識別子: 廃藩置県（読み: はいはんちけん） ／ 後半呼称: （なし）",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "事件名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "廃藩置県（はいはんちけん、旧字体: 廢藩置縣）は、明治維新期の明治4年7月14日（西暦1871年8月29日）に、明治政府が従来の藩を廃止して地方統治を中央管下の府又は県に一元化した行政改革である。ただし、沖縄県の近代史においては、琉球処分の一環として1879年（明治12年）に琉球藩を廃して沖縄県を設置したことを指す（#その他の異動を参照）。廃藩置県を江戸時代の終期とする説もある。\n300弱の藩を廃…",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『廃藩置県』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『廃藩置県』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "けん"
+    },
+    {
+      "turn": 3,
+      "player": "PlayerB",
+      "message_id": "74e16998-e499-45f9-b01f-5151749d407c",
+      "required_prefix": "けん",
+      "answer": {
+        "full_name": "加ト・けん・たけしの世紀末スペシャル!!",
+        "identifier": "加ト・けん・たけしの世紀末スペシャル!!",
+        "identifier_reading": "けん",
+        "suffix": "",
+        "category": "事件名",
+        "source_id": "wikipedia_ja",
+        "source_title": "加ト・けん・たけしの世紀末スペシャル!!"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 20,
+        "bonus": {
+          "strategy": {
+            "score": 2,
+            "reason": "語尾が『けん』となり相手の選択肢を大きく狭める強力な布石です。"
+          },
+          "education": {
+            "score": 0,
+            "reason": "基本的な歴史事項です。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 22
+      },
+      "elapsed_ms": 3095,
+      "commentary": "第3ターン、PlayerB は落ち着いた様子で『加ト・けん・たけしの世紀末スペシャル!!』と回答！見事なしりとり連鎖です！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 加ト・けん・たけしの世紀末スペシャル!! ／ 識別子: 加ト・けん・たけしの世紀末スペシャル!!（読み: けん） ／ 後半呼称: （なし）",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "事件名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "『加ト・けん・たけしの世紀末スペシャル!!』（かト・けん・たけしのせいきまつスペシャル）は、フジテレビ系列で1998年12月19日（土曜日）19:00 - 20:54（JST）に放送されたバラエティ番組。平均視聴率は14.0%だった。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『加ト・けん・たけしの世紀末スペシャル!!』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『加ト・けん・たけしの世紀末スペシャル!!』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "けん"
+    },
+    {
+      "turn": 4,
+      "player": "PlayerA",
+      "message_id": "a271e56f-a782-4876-8127-57a62400801e",
+      "required_prefix": "けん",
+      "answer": {
+        "full_name": "けんちゃんのオーマイゴッド",
+        "identifier": "けんちゃんのオーマイゴッド",
+        "identifier_reading": "けんちゃんのおーまいごっど",
+        "suffix": "",
+        "category": "事件名",
+        "source_id": "wikipedia_ja",
+        "source_title": "けんちゃんのオーマイゴッド"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 13,
+        "bonus": {
+          "strategy": {
+            "score": 1,
+            "reason": "識別子の長さと適度な返しにくさを備えた巧みな一手です。"
+          },
+          "education": {
+            "score": 0,
+            "reason": "基本的な歴史事項です。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 14
+      },
+      "elapsed_ms": 2664,
+      "commentary": "第4ターン、PlayerA による『けんちゃんのオーマイゴッド』！歴史の重みを感じさせる素晴らしい一手です！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: けんちゃんのオーマイゴッド ／ 識別子: けんちゃんのオーマイゴッド（読み: けんちゃんのおーまいごっど） ／ 後半呼称: （なし）",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "事件名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "『けんちゃんのオーマイゴッド!』は、1996年4月19日から同年9月20日までフジテレビ系列局で放送されていたイザワオフィス制作のバラエティ番組。全15回。放送時間は毎週金曜 19:29 - 19:58 （日本標準時）。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『けんちゃんのオーマイゴッド』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『けんちゃんのオーマイゴッド』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "と"
+    },
+    {
+      "turn": 5,
+      "player": "PlayerC",
+      "message_id": "f09c22c5-cee2-4b0b-a1b6-a4457f54cc67",
+      "required_prefix": "と",
+      "answer": {
+        "full_name": "徳川家康",
+        "identifier": "徳川家康",
+        "identifier_reading": "とくがわ",
+        "suffix": "",
+        "category": "人物名",
+        "source_id": "wikipedia_ja",
+        "source_title": "徳川家康"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 4,
+        "bonus": {
+          "strategy": {
+            "score": 1,
+            "reason": "識別子の長さと適度な返しにくさを備えた巧みな一手です。"
+          },
+          "education": {
+            "score": 0,
+            "reason": "基本的な歴史事項です。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 5
+      },
+      "elapsed_ms": 2487,
+      "commentary": "第5ターン、PlayerC が力強く『徳川家康』を繰り出しました！場内に緊張が走ります！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 徳川家康 ／ 識別子: 徳川家康（読み: とくがわ） ／ 後半呼称: （なし）",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "人物名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "徳川 家康（とくがわ いえやす、旧字体: 德川 家康）は、戦国時代から江戸時代初期の日本の武将・大名。江戸幕府の初代征夷大将軍。徳川氏（将軍家、御三家）の祖。天下人であり、三英傑の一人に数えられることもある。正式な姓名は、源 家康（みなもと の いえやす）。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『徳川家康』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『徳川家康』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "わ"
+    },
+    {
+      "turn": 6,
+      "player": "PlayerB",
+      "message_id": "c2bd4f37-8398-4724-ba3c-3379eda491f6",
+      "required_prefix": "わ",
+      "answer": {
+        "full_name": "和田合戦",
+        "identifier": "和田",
+        "identifier_reading": "わだ",
+        "suffix": "合戦",
+        "category": "合戦名",
+        "source_id": "wikipedia_ja",
+        "source_title": "和田合戦"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 4,
+        "bonus": {
+          "strategy": {
+            "score": 1,
+            "reason": "識別子の長さと適度な返しにくさを備えた巧みな一手です。"
+          },
+          "education": {
+            "score": 2,
+            "reason": "日本史の教科書的にも極めて重要であり、歴史的意義の記述が充実しています。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 7
+      },
+      "elapsed_ms": 2735,
+      "commentary": "第6ターン、PlayerB が力強く『和田合戦』を繰り出しました！場内に緊張が走ります！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 和田合戦 ／ 識別子: 和田（読み: わだ） ／ 後半呼称: 合戦",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "合戦名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "和田合戦（わだがっせん）は、鎌倉時代初期の建暦3年（1213年）5月に鎌倉幕府内で起こった有力御家人和田義盛の反乱である。和田義盛の乱とも呼ばれる。\n建暦3年（1213年）2月、北条義時を排除しようと企む泉親衡の謀反が露見（泉親衡の乱）、その折に和田義盛の息子の義直・義重と、甥の胤長が捕縛される。息子2人は赦免となるも、義盛は三浦氏を含む一族を挙げて甥の胤長の赦免も懇請したが、胤長は首謀者格と同等…",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『和田合戦』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『和田』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "た"
+    },
+    {
+      "turn": 7,
+      "player": "PlayerA",
+      "message_id": "1e335800-c3d4-4731-a129-3f258cd77dc6",
+      "required_prefix": "た",
+      "answer": {
+        "full_name": "大化の改新",
+        "identifier": "大化の改新",
+        "identifier_reading": "たいかのかいしん",
+        "suffix": "",
+        "category": "事件名",
+        "source_id": "wikipedia_ja",
+        "source_title": "大化の改新"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 5,
+        "bonus": {
+          "strategy": {
+            "score": 2,
+            "reason": "語尾が『し』となり相手の選択肢を大きく狭める強力な布石です。"
+          },
+          "education": {
+            "score": 2,
+            "reason": "日本史の教科書的にも極めて重要であり、歴史的意義の記述が充実しています。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 9
+      },
+      "elapsed_ms": 2871,
+      "commentary": "第7ターン、PlayerA が力強く『大化の改新』を繰り出しました！場内に緊張が走ります！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 大化の改新 ／ 識別子: 大化の改新（読み: たいかのかいしん） ／ 後半呼称: （なし）",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "事件名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "大化の改新（たいかのかいしん）は、皇極天皇4年（645年）6月12日、飛鳥板蓋宮の乙巳の変（蘇我入鹿の暗殺による蘇我氏の滅亡）に始まる一連の国政改革。狭義には大化年間（645年 - 650年）の改革のみを指すが、広義には大宝元年（701年）の大宝律令完成までに行われた一連の改革を含む。改革そのものは、中大兄皇子・大海人皇子の年若い両皇子の協力によって推進された。\nこの改革によって、豪族を中心とした…",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『大化の改新』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『大化の改新』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "し"
+    },
+    {
+      "turn": 8,
+      "player": "PlayerC",
+      "message_id": "d85d67c8-1698-450a-8d76-f71072002a41",
+      "required_prefix": "し",
+      "answer": {
+        "full_name": "聖徳太子",
+        "identifier": "聖徳太子",
+        "identifier_reading": "しょうとくたいし",
+        "suffix": "",
+        "category": "人物名",
+        "source_id": "wikipedia_ja",
+        "source_title": "聖徳太子"
+      },
+      "verdict": "valid",
+      "verified_by": "wikipedia_ja",
+      "error_code": null,
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 4,
+        "bonus": {
+          "strategy": {
+            "score": 1,
+            "reason": "識別子の長さと適度な返しにくさを備えた巧みな一手です。"
+          },
+          "education": {
+            "score": 0,
+            "reason": "基本的な歴史事項です。"
+          },
+          "rarity": {
+            "score": 0,
+            "reason": "一般的な分類です。"
+          }
+        },
+        "penalty": 0,
+        "total": 5
+      },
+      "elapsed_ms": 3123,
+      "commentary": "第8ターン、PlayerC による『聖徳太子』！歴史の重みを感じさせる素晴らしい一手です！",
+      "explanation": [
+        {
+          "item": "構造解析",
+          "text": "フル表記: 聖徳太子 ／ 識別子: 聖徳太子（読み: しょうとくたいし） ／ 後半呼称: （なし）",
+          "source": "llm"
+        },
+        {
+          "item": "分類",
+          "text": "人物名（日本史における歴史的事象）",
+          "source": "llm"
+        },
+        {
+          "item": "概要",
+          "text": "十七条憲法の制定者。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "歴史的意義",
+          "text": "『聖徳太子』は日本史上の重要な節目として広く記録されています。",
+          "source": "wikipedia_ja"
+        },
+        {
+          "item": "豆知識・トリビア",
+          "text": "識別子『聖徳太子』の語尾を起点に次なる連鎖が紡がれます。",
+          "source": "llm"
+        }
+      ],
+      "next_prefix": "し"
+    },
+    {
+      "turn": 9,
+      "player": "PlayerB",
+      "message_id": "75c055fb-762e-4a1f-a654-43bf08cc21b5",
+      "required_prefix": "し",
+      "answer": {
+        "full_name": "治承・寿永の乱",
+        "identifier": "治承・寿永",
+        "identifier_reading": "じしょう・じゅえい",
+        "suffix": "乱",
+        "category": "乱",
+        "source_id": "wikipedia_ja",
+        "source_title": "治承・寿永の乱"
+      },
+      "verdict": "invalid",
+      "verified_by": null,
+      "error_code": "e-5",
+      "penalty": {
+        "applied": false,
+        "ids": []
+      },
+      "score": {
+        "base": 0,
+        "bonus": {},
+        "penalty": 0,
+        "total": 0
+      },
+      "elapsed_ms": 2992,
+      "commentary": "第9ターン、PlayerB の回答は 実在が確認できない名称 により無効判定となりました！無念の失格です！",
+      "explanation": [],
+      "next_prefix": null
+    }
+  ],
+  "log": [
+    {
+      "time": "2026-10-22T08:27:20.002591+09:00",
+      "type": "info",
+      "message": "ゲーム開始処理中... (game_id: g-20261022-082720)"
+    },
+    {
+      "time": "2026-10-22T08:27:20.007374+09:00",
+      "type": "info",
+      "message": "開始文字を抽選: 『ぬ』"
+    },
+    {
+      "time": "2026-10-22T08:27:20.012106+09:00",
+      "type": "debug",
+      "message": "開始文字『ぬ』の候補数が充足（5件以上）を確認しました"
+    },
+    {
+      "time": "2026-10-22T08:27:20.012212+09:00",
+      "type": "info",
+      "message": "開始文字『ぬ』の候補数が充足（5件以上）を確認しました"
+    },
+    {
+      "time": "2026-10-22T08:27:20.012345+09:00",
+      "type": "info",
+      "message": "手番巡回順が決定: PlayerA → PlayerC → PlayerB"
+    },
+    {
+      "time": "2026-10-22T08:27:20.016928+09:00",
+      "type": "info",
+      "message": "第1ターン: PlayerA へ指示送信（必要頭文字列: 『ぬ』）"
+    },
+    {
+      "time": "2026-10-22T08:27:26.753008+09:00",
+      "type": "info",
+      "message": "第1ターン: PlayerA の回答『沼津藩合戦』は有効！ (+8点)"
+    },
+    {
+      "time": "2026-10-22T08:27:26.759255+09:00",
+      "type": "info",
+      "message": "第2ターン: PlayerC へ指示送信（必要頭文字列: 『は』）"
+    },
+    {
+      "time": "2026-10-22T08:27:30.999587+09:00",
+      "type": "info",
+      "message": "第2ターン: PlayerC の回答『廃藩置県』は有効！ (+8点)"
+    },
+    {
+      "time": "2026-10-22T08:27:31.012862+09:00",
+      "type": "info",
+      "message": "第3ターン: PlayerB へ指示送信（必要頭文字列: 『けん』）"
+    },
+    {
+      "time": "2026-10-22T08:27:34.958273+09:00",
+      "type": "info",
+      "message": "第3ターン: PlayerB の回答『加ト・けん・たけしの世紀末スペシャル!!』は有効！ (+22点)"
+    },
+    {
+      "time": "2026-10-22T08:27:34.970994+09:00",
+      "type": "info",
+      "message": "第4ターン: PlayerA へ指示送信（必要頭文字列: 『けん』）"
+    },
+    {
+      "time": "2026-10-22T08:27:38.507465+09:00",
+      "type": "info",
+      "message": "第4ターン: PlayerA の回答『けんちゃんのオーマイゴッド』は有効！ (+14点)"
+    },
+    {
+      "time": "2026-10-22T08:27:38.528970+09:00",
+      "type": "info",
+      "message": "第5ターン: PlayerC へ指示送信（必要頭文字列: 『と』）"
+    },
+    {
+      "time": "2026-10-22T08:27:41.576456+09:00",
+      "type": "info",
+      "message": "第5ターン: PlayerC の回答『徳川家康』は有効！ (+5点)"
+    },
+    {
+      "time": "2026-10-22T08:27:41.603864+09:00",
+      "type": "info",
+      "message": "第6ターン: PlayerB へ指示送信（必要頭文字列: 『わ』）"
+    },
+    {
+      "time": "2026-10-22T08:27:44.928995+09:00",
+      "type": "info",
+      "message": "第6ターン: PlayerB の回答『和田合戦』は有効！ (+7点)"
+    },
+    {
+      "time": "2026-10-22T08:27:44.942841+09:00",
+      "type": "info",
+      "message": "第7ターン: PlayerA へ指示送信（必要頭文字列: 『た』）"
+    },
+    {
+      "time": "2026-10-22T08:27:55.068684+09:00",
+      "type": "info",
+      "message": "第7ターン: PlayerA の回答『大化の改新』は有効！ (+9点)"
+    },
+    {
+      "time": "2026-10-22T08:27:55.091341+09:00",
+      "type": "info",
+      "message": "第8ターン: PlayerC へ指示送信（必要頭文字列: 『し』）"
+    },
+    {
+      "time": "2026-10-22T08:27:58.652584+09:00",
+      "type": "info",
+      "message": "第8ターン: PlayerC の回答『聖徳太子』は有効！ (+5点)"
+    },
+    {
+      "time": "2026-10-22T08:27:58.669564+09:00",
+      "type": "info",
+      "message": "第9ターン: PlayerB へ指示送信（必要頭文字列: 『し』）"
+    },
+    {
+      "time": "2026-10-22T08:28:02.119739+09:00",
+      "type": "error",
+      "message": "歴史データソース障害のため実在判定不能: 治承・寿永の乱"
+    },
+    {
+      "time": "2026-10-22T08:28:02.119973+09:00",
+      "type": "warning",
+      "message": "第9ターン: PlayerB は無効回答（e-5）により失格！"
+    },
+    {
+      "time": "2026-10-22T08:28:02.131839+09:00",
+      "type": "info",
+      "message": "ゲーム終了処理中... 終了理由: INVALID_ANSWER"
+    }
+  ],
+  "final_summary": "【歴史出来事しりとり AI アリーナ 最終結果】\n優勝者: PlayerA（スコア: PlayerA: 31点、PlayerB: 29点、PlayerC: 18点）\n総ターン数: 9 ターン\n今大会で学べた主な歴史出来事:\n沼津藩合戦、廃藩置県、加ト・けん・たけしの世紀末スペシャル!!、けんちゃんのオーマイゴッド、徳川家康、和田合戦、大化の改新、聖徳太子\n\n各AIエージェントの戦略性と歴史の知識が見事に結実した白熱の戦いでした！",
+  "error": "Sources failed for title: 治承・寿永の乱",
+  "updated_at": "2026-10-22T08:28:02.135454+09:00"
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>歴史しりとり AI アリーナ</title>
+  <link rel="stylesheet" href="/static/style.css?v={{ app_version }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="title-area">
+        <h1 class="app-title">歴史しりとり AI アリーナ</h1>
+        <div id="statusBadge" class="status-badge status-idle">待機中 (IDLE)</div>
+      </div>
+      <div class="controls-area">
+        <button id="btnStart" class="btn btn-start" onclick="startGame()">
+          ▶ 大会開始
+        </button>
+        <button id="btnStop" class="btn btn-stop" onclick="stopGame()" disabled>
+          ⏹ 終了宣告
+        </button>
+        <button id="btnReset" class="btn btn-reset" onclick="resetGame()">
+          🔄 リセット
+        </button>
+      </div>
+    </header>
+
+    <!-- Status Banner -->
+    <section class="status-banner">
+      <div class="status-item">
+        <div class="status-label">現在の状態</div>
+        <div id="statusText" class="status-value">-</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">総ターン数</div>
+        <div id="totalTurnsText" class="status-value">0 / 50</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">現在の必要頭文字列</div>
+        <div class="status-value">
+          <span id="prefixText" class="prefix-highlight">-</span>
+          <span id="prefixReasonText" class="prefix-reason"></span>
+        </div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">現在の手番</div>
+        <div id="currentPlayerText" class="status-value" style="color: #38bdf8;">-</div>
+      </div>
+    </section>
+
+    <!-- Scoreboard & Player Cards -->
+    <section class="players-area">
+      <!-- PlayerA Card -->
+      <div id="cardPlayerA" class="player-card card-playera">
+        <div class="player-header">
+          <span class="player-name" style="color: var(--color-playera);">PlayerA</span>
+          <span class="player-role">戦略家</span>
+        </div>
+        <div class="player-score">
+          <span id="scorePlayerA">0</span><span class="score-unit">pts</span>
+        </div>
+        <div id="statusBadgePlayerA" class="player-status-badge status-waiting">待機中</div>
+        <div class="player-latest-answer">
+          <div class="answer-label">直近の回答</div>
+          <div id="answerPlayerA" class="answer-val">-</div>
+        </div>
+        <div id="commentPlayerA" class="player-comment">「戦略的価値を最大化します」</div>
+        <details class="msg-details">
+          <summary>メッセージ通信ログ</summary>
+          <pre id="msgPlayerA">通信履歴なし</pre>
+        </details>
+      </div>
+
+      <!-- PlayerB Card -->
+      <div id="cardPlayerB" class="player-card card-playerb">
+        <div class="player-header">
+          <span class="player-name" style="color: var(--color-playerb);">PlayerB</span>
+          <span class="player-role">歴史学者</span>
+        </div>
+        <div class="player-score">
+          <span id="scorePlayerB">0</span><span class="score-unit">pts</span>
+        </div>
+        <div id="statusBadgePlayerB" class="player-status-badge status-waiting">待機中</div>
+        <div class="player-latest-answer">
+          <div class="answer-label">直近の回答</div>
+          <div id="answerPlayerB" class="answer-val">-</div>
+        </div>
+        <div id="commentPlayerB" class="player-comment">「歴史的意義の深い出来事を選びます」</div>
+        <details class="msg-details">
+          <summary>メッセージ通信ログ</summary>
+          <pre id="msgPlayerB">通信履歴なし</pre>
+        </details>
+      </div>
+
+      <!-- PlayerC Card -->
+      <div id="cardPlayerC" class="player-card card-playerc">
+        <div class="player-header">
+          <span class="player-name" style="color: var(--color-playerc);">PlayerC</span>
+          <span class="player-role">ユーモア</span>
+        </div>
+        <div class="player-score">
+          <span id="scorePlayerC">0</span><span class="score-unit">pts</span>
+        </div>
+        <div id="statusBadgePlayerC" class="player-status-badge status-waiting">待機中</div>
+        <div class="player-latest-answer">
+          <div class="answer-label">直近の回答</div>
+          <div id="answerPlayerC" class="answer-val">-</div>
+        </div>
+        <div id="commentPlayerC" class="player-comment">「観客を楽しませる意外な一手を狙います」</div>
+        <details class="msg-details">
+          <summary>メッセージ通信ログ</summary>
+          <pre id="msgPlayerC">通信履歴なし</pre>
+        </details>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="main-grid">
+      <!-- Left: Judge Commentary Panel & History Table -->
+      <div class="main-panel">
+        <!-- Judge Commentary Panel -->
+        <section id="judgePanel" class="judge-panel" style="display: none;">
+          <h2 class="panel-title">⚖ 審判実況・解説パネル (Judge)</h2>
+          <div id="commentaryBox" class="commentary-box">
+            実況がここに表示されます。
+          </div>
+          <div id="explanationList" class="explanation-list">
+            <!-- 構造解析、概要、意義、豆知識が動的に追加 -->
+          </div>
+          <div class="score-breakdown">
+            <div class="score-col">
+              <div class="score-col-label">基本点</div>
+              <div id="scoreBase" class="score-col-val">0</div>
+            </div>
+            <div class="score-col">
+              <div class="score-col-label">ボーナス点</div>
+              <div id="scoreBonus" class="score-col-val" style="color: #f59e0b;">+0</div>
+            </div>
+            <div class="score-col">
+              <div class="score-col-label">ペナルティ減点</div>
+              <div id="scorePenalty" class="score-col-val" style="color: #ef4444;">-0</div>
+            </div>
+            <div class="score-col">
+              <div class="score-col-label">ターン獲得点</div>
+              <div id="scoreTotal" class="score-col-val" style="color: #38bdf8;">0</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Turn History Table -->
+        <section id="historySection" class="table-card" style="display: none;">
+          <h2 class="card-title">📜 ターン履歴</h2>
+          <div class="history-table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Player</th>
+                  <th>回答（フル表記）</th>
+                  <th>識別子（読み）</th>
+                  <th>判定</th>
+                  <th>得点</th>
+                  <th>時間</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody">
+                <!-- ターン行が動的に挿入される -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right: Game Log -->
+      <aside class="side-panel">
+        <section class="table-card">
+          <h2 class="card-title">
+            <span>📢 ゲームログ</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">直近20件</span>
+          </h2>
+          <div id="gameLogBox" class="log-box">
+            <!-- ログエントリ -->
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Winner Modal -->
+  <div id="winnerModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-crown">👑</div>
+      <h2 class="modal-title">大会終了！</h2>
+      <div id="modalWinners" class="modal-winners">-</div>
+      <div id="modalSummary" class="modal-summary">-</div>
+      <button class="btn-modal-close" onclick="closeModal()">閉じる</button>
+    </div>
+  </div>
+
+  <script src="/static/game.js?v={{ app_version }}"></script>
+</body>
+</html>
